@@ -12,18 +12,20 @@ function JobCard({ jobInfo }: JobCardProps) {
     <SJobCard featured={jobInfo.featured}>
       <SJobInfoContainer>
         <img src={jobInfo.logo} alt="" />
-        <div className="name-tags">
-          <h1>{jobInfo.company}</h1>
-          {jobInfo.new && <Pill name="NEW!" />}
-          {jobInfo.featured && (
-            <Pill name="featured" color={veryDarkGrayishCyan} />
-          )}
-        </div>
-        <h2>{jobInfo.position}</h2>
-        <div className="job-details">
-          <span>{jobInfo.postedAt}</span>&bull;<span>{jobInfo.contract}</span>
-          &bull;
-          <span>{jobInfo.location}</span>
+        <div>
+          <div className="name-tags">
+            <h1>{jobInfo.company}</h1>
+            {jobInfo.new && <Pill name="NEW!" />}
+            {jobInfo.featured && (
+              <Pill name="featured" color={veryDarkGrayishCyan} />
+            )}
+          </div>
+          <h2>{jobInfo.position}</h2>
+          <div className="job-details">
+            <span>{jobInfo.postedAt}</span>&bull;<span>{jobInfo.contract}</span>
+            &bull;
+            <span>{jobInfo.location}</span>
+          </div>
         </div>
       </SJobInfoContainer>
       <STagsContainer>

@@ -4,7 +4,10 @@ import {
   lightGrayishCyanTabs,
 } from "../../styles/colors.styles";
 
-export const STag = styled.div`
+interface STagProps {
+  filterVariant: boolean;
+}
+export const STag = styled.div<STagProps>`
   font-size: 1rem;
   font-weight: 700;
   border-radius: 4px;
@@ -15,5 +18,6 @@ export const STag = styled.div`
     padding: 0.5rem;
     background-color: ${lightGrayishCyanTabs};
     color: ${desaturatedDarkCyan};
+    cursor: ${({ filterVariant }) => !filterVariant && "pointer"};
   }
 `;
