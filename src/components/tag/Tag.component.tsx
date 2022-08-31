@@ -3,9 +3,9 @@ import removeIcon from "../../images/icon-remove.svg";
 
 interface TagProps {
   name: string;
-  onClick?: Function;
+  onClick?: VoidFunction;
   filterVariant?: boolean;
-  onButtonClick?: Function;
+  onButtonClick?: VoidFunction;
 }
 function Tag({
   name,
@@ -15,9 +15,9 @@ function Tag({
 }: TagProps) {
   return (
     <STag filterVariant={filterVariant}>
-      <span>{name}</span>
+      <span onClick={onClick}>{name}</span>
       {filterVariant && (
-        <button aria-label="remove">
+        <button aria-label="remove" onClick={onButtonClick}>
           <img src={removeIcon} alt="" />
         </button>
       )}

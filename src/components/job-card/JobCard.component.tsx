@@ -6,8 +6,16 @@ import { SJobCard, SJobInfoContainer, STagsContainer } from "./JobCard.styles";
 
 interface JobCardProps {
   jobInfo: iJobData;
+  setFilters: React.Dispatch<React.SetStateAction<string[]>>;
 }
-function JobCard({ jobInfo }: JobCardProps) {
+function JobCard({ jobInfo, setFilters }: JobCardProps) {
+  const handleTagClick = (tag: string) => {
+    setFilters((prev) => {
+      if (!prev.includes(tag)) return [...prev, tag];
+      else return prev;
+    });
+  };
+
   return (
     <SJobCard featured={jobInfo.featured}>
       <SJobInfoContainer>
@@ -22,7 +30,9 @@ function JobCard({ jobInfo }: JobCardProps) {
           </div>
           <h2>{jobInfo.position}</h2>
           <div className="job-details">
-            <span>{jobInfo.postedAt}</span>&bull;<span>{jobInfo.contract}</span>
+            <span>{jobInfo.postedAt}</span>
+            &bull;
+            <span>{jobInfo.contract}</span>
             &bull;
             <span>{jobInfo.location}</span>
           </div>
@@ -35,7 +45,7 @@ function JobCard({ jobInfo }: JobCardProps) {
           ...jobInfo.tools,
           ...jobInfo.languages,
         ].map((tag) => (
-          <Tag key={tag} name={tag} />
+          <Tag key={tag} name={tag} onClick={() => handleTagClick(tag)} />
         ))}
       </STagsContainer>
     </SJobCard>

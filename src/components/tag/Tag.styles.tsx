@@ -12,6 +12,7 @@ export const STag = styled.div<STagProps>`
   font-weight: 700;
   border-radius: 4px;
   overflow: hidden;
+  display: flex;
 
   span {
     display: block;
@@ -19,5 +20,12 @@ export const STag = styled.div<STagProps>`
     background-color: ${lightGrayishCyanTabs};
     color: ${desaturatedDarkCyan};
     cursor: ${({ filterVariant }) => !filterVariant && "pointer"};
+  }
+
+  & > button {
+    background-color: ${desaturatedDarkCyan};
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
   }
 `;
