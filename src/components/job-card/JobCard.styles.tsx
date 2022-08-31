@@ -70,6 +70,11 @@ export const SJobInfoContainer = styled.div`
   h2 {
     margin-bottom: 0.75rem;
     color: ${veryDarkGrayishCyan};
+    cursor: pointer;
+
+    &:hover {
+      color: ${desaturatedDarkCyan};
+    }
   }
 
   .job-details {

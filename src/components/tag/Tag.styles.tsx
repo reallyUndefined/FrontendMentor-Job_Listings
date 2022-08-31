@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {
   desaturatedDarkCyan,
   lightGrayishCyanTabs,
+  veryDarkGrayishCyan,
 } from "../../styles/colors.styles";
 
 interface STagProps {
@@ -14,12 +15,19 @@ export const STag = styled.div<STagProps>`
   overflow: hidden;
   display: flex;
 
-  span {
+  & span {
     display: block;
     padding: 0.5rem;
     background-color: ${lightGrayishCyanTabs};
     color: ${desaturatedDarkCyan};
     cursor: ${({ filterVariant }) => !filterVariant && "pointer"};
+
+    &:hover {
+      background-color: ${({ filterVariant }) =>
+        filterVariant ? lightGrayishCyanTabs : desaturatedDarkCyan};
+      color: ${({ filterVariant }) =>
+        filterVariant ? desaturatedDarkCyan : "white"};
+    }
   }
 
   & > button {
@@ -27,5 +35,9 @@ export const STag = styled.div<STagProps>`
     padding: 0.5rem;
     border: none;
     cursor: pointer;
+
+    &:hover {
+      background-color: ${veryDarkGrayishCyan};
+    }
   }
 `;
