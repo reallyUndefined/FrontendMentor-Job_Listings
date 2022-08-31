@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-export const SPill = styled.div`
+interface SPillProps {
+  bgColor: string;
+}
+export const SPill = styled.div<SPillProps>`
   border-radius: 99rem;
   background-color: ${({ color }) => color};
   color: white;

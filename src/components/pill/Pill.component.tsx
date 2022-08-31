@@ -6,7 +6,7 @@ interface PillProps {
   color?: string;
 }
 function Pill({ name, color = desaturatedDarkCyan }: PillProps) {
-  return <SPill color={color}>{name}</SPill>;
+  return <SPill bgColor={color}>{name}</SPill>;
 }
 
 export default Pill;

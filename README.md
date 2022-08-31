@@ -1,4 +1,42 @@
-# Getting Started with Create React App
+# Frontend Mentor - Job Listings
+
+This is a solution to the [Job Listings app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+- [Frontend Mentor - Job Listings](#frontend-mentor---job-listings)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+  - [Available Scripts](#available-scripts)
+    - [`yarn start`](#yarn-start)
+    - [`yarn test`](#yarn-test)
+    - [`yarn build`](#yarn-build)
+    - [`yarn eject`](#yarn-eject)
+  - [Learn More](#learn-more)
+
+## Overview
+
+### Screenshot
+
+![screenshot](./screenshots/screenshot-1.png)
+
+### Links
+
+- Solution URL: [Click here](https://www.frontendmentor.io/solutions/job-listings-with-react-NsVVY4k51O)
+- Live Site URL: [Click here](https://undefined-fm-job-listings.netlify.app/)
+
+## My process
+
+### Built with
+
+- React
+- Typescript
+- Semantic HTML5 markup
+- Styled Components
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
